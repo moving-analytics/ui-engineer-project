@@ -1,0 +1,43 @@
+.stat {
+	width: 200px;
+}
+
+.bar {
+	stroke: #dce4f5; 
+	fill: none; 
+	stroke-dasharray: 62.83185307179586 125.66370614359172;
+}
+
+.progress {
+	fill: none;
+	transform-origin: center center;
+	animation: progress 1s ease-out ;
+}
+
+@keyframes progress {
+	0% {
+	  stroke-dasharray: 100 0;
+	}
+  }
+
+svg {
+	display: block;
+	transform-origin: center center;
+	transform: rotate( 90deg );
+}
+
+path {
+	stroke-linecap: round;
+	stroke-width: 4px ;
+	fill: none;
+}
+
+.value {
+	font-size: 3em;
+	top: -160px;
+}
+
+.minmax {
+	top: -100px;
+	left: 13px;
+}
