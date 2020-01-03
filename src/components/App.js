@@ -12,25 +12,21 @@ const dummyData = [
 
 const App = () => {
 	
-	const [healthData, setHealthData] = useState(dummyData);
+	const [healthData, setHealthData] = useState([]);
 
-	// useEffect(() => {
-	// 	fetch('https://sandbox.movinganalytics.com/test/indicators')
-	// 		.then((response) => {
-	// 			console.log(response);
-	// 			return response.json();
-	// 		})
-	// 		.then((myJson) => {
-	// 			console.log(myJson);
-				
-	// 		})
-	// 		.catch((error) => {
-	// 			console.log(error);
-	// 			setHealthData([
-	// 				dummyData
-	// 			]);
-	// 		});
-	// }, []);
+	useEffect(() => {
+		fetch('https://sandbox.movinganalytics.com/test/indicators')
+			.then((response) => {
+				return response.json();
+			})
+			.then((myJson) => {
+				setHealthData(myJson);
+			})
+			.catch((error) => {
+				console.log(error);
+				setHealthData(dummyData);
+			});
+	}, []);
 	
 	return (
 		<div className="container">
