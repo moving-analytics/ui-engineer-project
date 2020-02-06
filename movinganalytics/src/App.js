@@ -5,7 +5,7 @@ import Guage from './components/Guage';
 const App = () => {
   const res = useFetch("https://cors-anywhere.herokuapp.com/" + "https://sandbox.movinganalytics.com/test/indicators");
   
-  if(res.load){
+  if (res.load) {
     return (
       <div className="App">
         <header className="App-header"></header>
