@@ -1,0 +1,38 @@
+$ns: '.gauge';
+
+#{$ns} {
+    position: relative;
+    width: 250px;
+    margin-right: 50px;
+
+    &__text {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    &__type {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &__value {
+        font-size: 56px;
+        color: #545A64;
+        margin-bottom: 25px;
+    }
+
+    &__range {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding: 0 7px;
+        
+        h3 {
+            font-size: inherit;
+        }
+    }
+}
