@@ -1,11 +1,15 @@
 # Moving Analytics UI Engineer Project
-A React based application that takes in API data and creates arcs based on the data. 
+A React based application that takes in API data and creates arcs in canvas based on the data. 
 
 ## Getting Started
-After cloning the repository, enter the source folder. Run npm install to download all dependencies. 
+After cloning the repository, enter the source folder. Run either of these commands to download all dependencies. 
 
 ```
 npm install
+
+OR
+
+yarn install
 ```
 
 While in the folder, use either of these commands to start the app:
