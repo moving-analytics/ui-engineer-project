@@ -1,31 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import useFetch from './util/useFetch';
-import Guage from './components/Guage';
+import Gauge from './components/Gauge';
+
+import './sass/main.scss';
 
 const App = () => {
-  const res = useFetch("https://cors-anywhere.herokuapp.com/" + "https://sandbox.movinganalytics.com/test/indicators");
+  // API URL location
+  const api = 'https://sandbox.movinganalytics.com/test/indicators';
+
+  // Used to bypass CORS in development for localhost
+  const res = useFetch('https://cors-anywhere.herokuapp.com/' + api);
   
-  if(res.load){
+  // Loads app when API data is recieved
+  if (res.load) {
     return (
-      <div className="App">
-        <header className="App-header"></header>
-        <div>
+      <div className="app">
+        <div className="app__gauge-container">
+        {/* Maps data into gauge component */}
         {
           res.data.map(data => (
-            <Guage data={data} key={data.type}/>
+            <Gauge data={data} key={data.type}/>
           ))
         }
         </div>
       </div>
     );
+  
+  // Displays loading if API hasn't responded, or displays error if problem with API
   } else {
     return(
-      <div>
-        Loading...
+      <div className="app__message-container">
+        {res.err ? 'Error loading page. Please refresh' : 'Loading'}
       </div>
-    )
-  }
-  
-}
+    );
+  };
+};
 
 export default App;
