@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 
 const Gauge = ({ data }) => {
+  const ns = 'gauge';
   // destructures API data for easier reference
   const { 
     type,
@@ -60,13 +61,13 @@ const Gauge = ({ data }) => {
   });
 
   return (
-    <div className='gauge'>
-      <canvas className='gauge__canvas' ref={canvasRef}/>
-      <div className='gauge__text'>
-        <div className='gauge__type'>{type}</div>
-        <div className='gauge__min'>{min}</div>
-        <div className='gauge__value'>{value}</div>
-        <div className='gauge__max'>{max}</div>
+    <div className={ns}>
+      <canvas className={`${ns}__canvas`} ref={canvasRef}/>
+      <div className={`${ns}__text`}>
+        <div className={`${ns}__type`}>{type}</div>
+        <div className={`${ns}__min`}>{min}</div>
+        <div className={`${ns}__value`}>{value}</div>
+        <div className={`${ns}__max`}>{max}</div>
       </div>
     </div>
   );

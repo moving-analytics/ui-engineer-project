@@ -5,6 +5,7 @@ import Gauge from './components/Gauge';
 import './sass/main.scss';
 
 const App = () => {
+  const ns = 'app';
   // API URL location
   const api = 'https://sandbox.movinganalytics.com/test/indicators';
 
@@ -14,8 +15,8 @@ const App = () => {
   // Loads app when API data is recieved
   if (res.load) {
     return (
-      <div className="app">
-        <div className="app__gauge-container">
+      <div className={ns}>
+        <div className={`${ns}__gauge-container`}>
         {/* Maps data into gauge component */}
         {
           res.data.map(data => (
@@ -29,7 +30,7 @@ const App = () => {
   // Displays loading if API hasn't responded, or displays error if problem with API
   } else {
     return(
-      <div className="app__message-container">
+      <div className={`${ns}__message-container`}>
         {res.err ? 'Error loading page. Please refresh' : 'Loading'}
       </div>
     );
