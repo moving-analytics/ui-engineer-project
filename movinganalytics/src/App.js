@@ -16,14 +16,12 @@ const App = () => {
   if (res.load) {
     return (
       <div className={ns}>
-        <div className={`${ns}__gauge-container`}>
         {/* Maps data into gauge component */}
         {
           res.data.map(data => (
             <Gauge data={data} key={data.type}/>
           ))
         }
-        </div>
       </div>
     );
   

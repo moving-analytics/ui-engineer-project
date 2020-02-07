@@ -20,9 +20,9 @@ const Gauge = ({ data }) => {
     const context2 = canvas.getContext('2d');
     context.scale(2,2);
     context2.scale(2,2);
-    canvas.width = 848;
+    canvas.width = 500;
     canvas.height = 440;
-    canvas.style.width = "414px";
+    canvas.style.width = "250px";
     canvas.style.height = "220px";
     const x = canvas.width / 2;
     const y = canvas.height / 1.5;
@@ -57,17 +57,19 @@ const Gauge = ({ data }) => {
       } else if (ctr > max*.7){
         context2.strokeStyle = "#E64F2A";
       }
-    }, 10)
+    }, 15)
   });
 
   return (
     <div className={ns}>
       <canvas className={`${ns}__canvas`} ref={canvasRef}/>
       <div className={`${ns}__text`}>
-        <div className={`${ns}__type`}>{type}</div>
-        <div className={`${ns}__min`}>{min}</div>
-        <div className={`${ns}__value`}>{value}</div>
-        <div className={`${ns}__max`}>{max}</div>
+        <h2 className={`${ns}__type`}>{type}</h2>
+        <h1 className={`${ns}__value`}>{value}</h1>
+        <div className={`${ns}__range`}>
+          <h3 className={`${ns}__range--min`}>{min}</h3>
+          <h3 className={`${ns}__range--max`}>{max}</h3>
+        </div>
       </div>
     </div>
   );

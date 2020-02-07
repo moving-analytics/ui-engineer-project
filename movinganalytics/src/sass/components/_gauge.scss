@@ -2,45 +2,37 @@ $ns: '.gauge';
 
 #{$ns} {
     position: relative;
-    margin: 0 auto;
-    padding: 0;
-    display: inline-block;
-
-    &__canvas {
-        position: relative;
-    }
+    width: 250px;
+    margin-right: 50px;
 
     &__text {
         position: absolute;
+        width: 100%;
         top: 0;
-        width: 414px;
-        height: 220px;
+        left: 0;
         text-align: center;
     }
 
     &__type {
         font-size: 18px;
-        position: relative;
-        top: 5px;
-    }
-
-    &__min {
-        position: absolute;
-        bottom: 40px;
-        left: 92.5px;
-    }
-
-    &__max {
-        position: absolute;
-        bottom: 40px;
-        right: 87.5px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
     }
 
     &__value {
-        position: relative;
-        top: 70px;
-        font-size: 48px;
+        font-size: 56px;
         color: #545A64;
-        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    &__range {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        padding: 0 7px;
+        
+        h3 {
+            font-size: inherit;
+        }
     }
 }
