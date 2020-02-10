@@ -1,0 +1,75 @@
+.indicator {
+  width: 250px;
+  height: 180px;
+  position: relative;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+.indicator-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.indicator-type {
+  justify-content: center;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.indicator-halfCircle {
+  width: 210px;
+  height: 105px;
+  position: absolute;
+  top: 37px;
+  left: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  --percentage: 0;
+  --fill: #44f7b2;
+
+  &:after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210px;
+    height: 210px;
+    border: 8px solid #dde4f5;
+    border-radius: 50%;
+    border-color: #dde4f5 #dde4f5 var(--fill) var(--fill);
+    transform: rotate(calc(1deg * (-45 + var(--percentage) * 1.8)));
+    animation: fillAnimation 1s ease-in;
+  }
+}
+
+.indicator-value {
+  margin-top: 40px;
+  color: #555a64;
+  font-size: 55px;
+}
+
+.indicator-min-max-container {
+  position: absolute;
+  top: 150px;
+  left: 6.5%;
+  width: 89%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.indicator-min-max {
+  display: flex;
+  font-size: 20px;
+}
+
+@keyframes fillAnimation {
+  0% { transform:rotate(-45deg); }
+}

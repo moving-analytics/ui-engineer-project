@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Indicator from './Indicator';
 
+import '../scss/style.scss'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='app'>
         {this.state.indicators.map((indicator, index) => <Indicator indicator={indicator} key={index}/>)}
       </div>
     )
