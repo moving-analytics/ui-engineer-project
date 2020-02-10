@@ -1,9 +1,9 @@
 import React from 'react';
 
-import '../scss/style.scss'
-
 const Indicator = ({ indicator }) => {
+  // value on how much to rotate circle to show indicator fill up
   const rotate = (indicator.value / indicator.max) * 100;
+  // changes color from red to yellow to green based on the percentage of rotate
   const fill = rotate > 75 ? '#e64f29' : rotate > 25 ? '#f2af2a' : '#44f7b2'
 
   return (
