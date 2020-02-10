@@ -1,0 +1,37 @@
+{
+  "name": "ui-engineer-project",
+  "version": "1.0.0",
+  "description": "> Your goal is to develop a page that pulls data from our API  > and displays the data exactly like the design spec below",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server",
+    "build": "webpack -w -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewmata/ui-engineer-project.git"
+  },
+  "keywords": [],
+  "author": "Matthew Mata",
+  "homepage": "https://github.com/matthewmata/ui-engineer-project#readme",
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-combine-loaders": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "node-gyp": "^6.1.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
