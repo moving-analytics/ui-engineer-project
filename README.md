@@ -2,7 +2,7 @@
 
 > A React based UI clone of Moving Analytics Indicators from https://sandbox.movinganalytics.com/test/indicators
 
-[![N|](https://i.ibb.co/DrTzLnp/image-8.png)
+![N|](https://i.ibb.co/DrTzLnp/image-8.png)
 
 ## Getting Started
 First clone down the repo.
