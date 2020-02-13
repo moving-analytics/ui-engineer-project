@@ -1,0 +1,12 @@
+.App {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  padding: 200px 0;
+}
+
+
