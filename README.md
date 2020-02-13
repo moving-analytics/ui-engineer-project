@@ -4,6 +4,7 @@ This application is built with React to display a similar interface to the follo
 
 [![N|](https://i.ibb.co/DrTzLnp/image-8.png)
 
+
 The gauges will arc from the left to the right as the data loads.
 
 The data is fetched from the following URL using the [axios](https://github.com/axios/axios) library: https://sandbox.movinganalytics.com/test/indicators
@@ -15,7 +16,7 @@ Clone this repo and run the following:
 npm install
 npm start
 ```
-The application can be viewed on http://localhost:3000/
+Once successfully ran, the application can be viewed on http://localhost:3000/
 
 ## Author
 Matthew Stockton
