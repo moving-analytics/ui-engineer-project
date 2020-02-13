@@ -18,6 +18,12 @@ npm start
 ```
 Once successfully ran, the application can be viewed on http://localhost:3000/
 
+## Supported Browsers
+
+- Chrome
+- Safari
+- Firefox
+
 ## Author
 Matthew Stockton
 
