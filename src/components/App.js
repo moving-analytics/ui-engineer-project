@@ -10,13 +10,13 @@ class App extends React.Component {
     super(props);
     this.state = {
       isLoaded: false,
-      metrics: []
+      metrics: [],
+      error: ""
     }
   }
   componentDidMount() {
     axios.get(proxyUrl+APIUrl)
       .then(res => {
-        console.log(res.data);
         this.setState((state) => {
           return {
             isLoaded: true,
@@ -25,7 +25,7 @@ class App extends React.Component {
         });  
       })
       .catch(err => {
-        
+        this.setState({error: err});
       });
   }
 
@@ -46,6 +46,11 @@ class App extends React.Component {
       )
     }
     else {
+      if(this.state.error) {
+        return (
+          <h3>Error fetching data from host: {this.state.error}</h3>
+        )
+      }
       return (
         <div className="loading">
           <h1>Loading...</h1>

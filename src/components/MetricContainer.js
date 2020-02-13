@@ -45,7 +45,6 @@ class MetricContainer extends React.Component {
 
     //  colored arc
     this.percent = this.props.metricValue/this.metricRange;
-    console.log(this.percent);
 
     if (this.percent < .31) {
       this.ctx.strokeStyle = "#3EEBAF" // green;
