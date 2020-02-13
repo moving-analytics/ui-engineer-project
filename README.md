@@ -1,5 +1,14 @@
 # Moving Analytics UI Engineer Code Exercise
 
+
+
+# Getting started
+```
+yarn
+yarn run serve
+```
+
+
 > Your goal is to develop a page that pulls data from our API 
 > and displays the data exactly like the design spec below
 
